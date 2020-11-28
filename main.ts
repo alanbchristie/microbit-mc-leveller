@@ -11,18 +11,18 @@ function updateindicator () {
 function setpitchrow () {
     pitch = input.rotation(Rotation.Pitch)
     if (pitch > 10) {
-        newpitchrow = 4
+        newpitchrow = 0
     } else {
         if (pitch > 5) {
-            newpitchrow = 3
+            newpitchrow = 1
         } else {
             if (pitch < -10) {
-                newpitchrow = 0
+                newpitchrow = 4
             } else {
                 if (pitch < -5) {
-                    newpitchrow = 1
+                    newpitchrow = 3
                 } else {
-                    if (pitch < 2 && pitch > -2) {
+                    if (pitch < 1 && pitch > -1) {
                         newpitchrow = 2
                     }
                 }
@@ -33,18 +33,18 @@ function setpitchrow () {
 function setrollcolumn () {
     roll = input.rotation(Rotation.Roll)
     if (roll > 10) {
-        newrollcolumn = 4
+        newrollcolumn = 0
     } else {
         if (roll > 5) {
-            newrollcolumn = 3
+            newrollcolumn = 1
         } else {
             if (roll < -10) {
-                newrollcolumn = 0
+                newrollcolumn = 4
             } else {
                 if (roll < -5) {
-                    newrollcolumn = 1
+                    newrollcolumn = 3
                 } else {
-                    if (roll < 2 && roll > -2) {
+                    if (roll < 1 && roll > -1) {
                         newrollcolumn = 2
                     }
                 }
