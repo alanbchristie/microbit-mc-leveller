@@ -8,6 +8,17 @@ function updateindicator () {
         rollcolumn = newrollcolumn
     }
 }
+/**
+ * A simple "digital leveller".
+ * 
+ * The code continuously reads the device "pitch" and "roll" angles and plots a single LED indicating the offset from "level".
+ * 
+ * The LED is illuminated on the "high" side. If the "roll" (left/right tilt) is low on the left then an LED is illuminated on the right-hand side of the LED matrix. The LED is used to indicate which "edge" is high.
+ * 
+ * LEDs on the outer edge of the matrix indicate an offset of 10 degrees or more. Inner-LEDs indicate an offset of less than 5 degrees.
+ * 
+ * The central LED is lit when the offset in either direction is less that 1 degree.
+ */
 function setpitchrow () {
     pitch = input.rotation(Rotation.Pitch)
     if (pitch > 10) {
